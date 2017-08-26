@@ -1,0 +1,49 @@
+<div layout="row">
+    <md-toolbar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links" style="background-color: black;">
+
+        <div class="md-toolbar-tools">
+            <h1 style="text-transform: uppercase;">{{moviePermalink}}</h1>
+            <span class="flex"></span>
+            <button class="md-button md-ink-ripple" type="button" ui-sref="movie-photos()">Photos</button>
+            <button class="md-button md-ink-ripple" type="button">Videos</button>
+            <button class="md-button md-ink-ripple" type="button">News</button>
+            <button class="md-button md-ink-ripple" type="button" ng-hide="isSignedIn()" ng-click="openLoginModal($event, false)">Login</button>
+            <button class="md-button md-ink-ripple" type="button" ng-show="isSignedIn()" ng-click="logout()">Logout</button>
+        </div>
+    </md-toolbar>
+</div>
+
+<!--  <nav class="navbar navbar-default navbar-fixed-top nav-reel">  -->
+    <!--<div class="container-fluid">-->
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-items">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand" href="#page-top">{{moviePermalink}}</a>-->
+        <!--</div>-->
+
+        <!--<div class="collapse navbar-collapse" id="navbar-collapse-items">-->
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li>-->
+                    <!--<a href="#">Photos</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#">Videos</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#">News</a>-->
+                <!--</li>-->
+                <!--<li ng-hide="isSignedIn()">-->
+                    <!--<a href="#" ng-click="openLoginModal()">Login</a>-->
+                <!--</li>-->
+                <!--<li ng-show="isSignedIn()">-->
+                    <!--<a href="#" ng-click="logout()">Logout</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+
+    <!--</div>-->
+<!--</nav>-->

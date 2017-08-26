@@ -1,0 +1,137 @@
+<md-content>
+    <md-tabs md-dynamic-height="" md-border-bottom="" md-selected="selectedIndex">
+        <md-tab label="Movie">
+            <md-content class="md-padding" layout-margin>
+                <h1 class="md-display-2">Movie Details</h1>
+
+                <form name="movieDetails">
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Movie title</label>
+                            <input ng-model="movie.name">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Caption</label>
+                            <input ng-model="movie.caption">
+                        </md-input-container>
+                    </div>
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Website address</label>
+                            <input ng-model="movie.permalink">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Release Year</label>
+                            <input ng-model="movie.releaseYear">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Genre</label>
+                            <input ng-model="movie.genre">
+                        </md-input-container>
+                    </div>
+                    <div layout-gt-sm="row">
+                        <span flex></span>
+                        <md-button class="md-raised md-primary" ng-click="createNewMovie()">Next</md-button>
+                    </div>
+                </form>
+            </md-content>
+        </md-tab>
+        <md-tab label="Actors">
+            <md-content class="md-padding" layout-margin>
+                <h1 class="md-display-2">Cast & Crew</h1>
+
+                <form name="peopleDetails">
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Movie Director</label>
+                            <input ng-model="movie.people.director">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Producers</label>
+                            <input ng-model="movie.people.producers">
+                        </md-input-container>
+                    </div>
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Male Leads</label>
+                            <input ng-model="movie.people.maleLeads">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Female Leads</label>
+                            <input ng-model="movie.people.femaleLeads">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Others</label>
+                            <input ng-model="movie.people.others">
+                        </md-input-container>
+                    </div>
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Music Director</label>
+                            <input ng-model="movie.people.musicDirector">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Story</label>
+                            <input ng-model="movie.people.storyWriters">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Screenplay</label>
+                            <input ng-model="movie.people.screenPlay">
+                        </md-input-container>
+                    </div>
+
+                    <div layout-gt-sm="row">
+                        <span flex></span>
+                        <md-button class="md-raised">Previous</md-button>
+                        <md-button class="md-raised md-primary" ng-click="addPeopleToMovie()">Next</md-button>
+                    </div>
+                </form>
+            </md-content>
+        </md-tab>
+        <md-tab label="Media">
+            <md-content class="md-padding" layout-margin>
+                <h1 class="md-display-2">Media</h1>
+
+                <form name="mediaDetails">
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Title Poster</label>
+                            <input ng-model="media.titlePoster">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Trailers</label>
+                            <input ng-model="media.trailers">
+                        </md-input-container>
+                    </div>
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Facebook Page</label>
+                            <input ng-model="media.fbPage">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Twitter Page</label>
+                            <input ng-model="media.twitterPage">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Youtube Channel</label>
+                            <input ng-model="media.youtubeChannel">
+                        </md-input-container>
+                    </div>
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Images</label>
+                            <input ng-model="media.images" ng-list>
+                        </md-input-container>
+                    </div>
+
+                    <div layout-gt-sm="row">
+                        <span flex></span>
+                        <md-button class="md-raised">Previous</md-button>
+                        <md-button class="md-raised md-primary" ng-hide="editing" ng-click="addMediaObject()">Add Media</md-button>
+                        <md-button class="md-raised md-primary" ng-show="editing" ng-click="updateMediaObject()">Update Media</md-button>
+                    </div>
+                </form>
+            </md-content>
+        </md-tab>
+    </md-tabs>
+</md-content>

@@ -1,0 +1,115 @@
+<md-content>
+    <md-tabs md-dynamic-height="" md-border-bottom="">
+        <md-tab label="Sign In">
+            <md-content class="md-padding" layout-margin>
+                <h1 class="md-display-2">Sign In</h1>
+
+                <form name="sign-in">
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Email Address</label>
+                            <input ng-model="signin.username">
+                        </md-input-container>
+                    </div>
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Password</label>
+                            <input ng-model="signin.password">
+                        </md-input-container>
+                    </div>
+                    <div layout-gt-sm="row">
+                        <span flex></span>
+                        <md-button class="md-raised md-primary" ng-click="login()">Sign In</md-button>
+                    </div>
+                </form>
+            </md-content>
+        </md-tab>
+        <md-tab label="Sign Up">
+            <md-content class="md-padding" layout-margin>
+                <h1 class="md-display-2">Sign Up</h1>
+
+                <form name="sign-up">
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Name</label>
+                            <input ng-model="signup.name">
+                        </md-input-container>
+                    </div>
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Email Address</label>
+                            <input ng-model="signup.email">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Password</label>
+                            <input type="password" ng-model="signup.password">
+                        </md-input-container>
+                    </div>
+                    <div layout-gt-sm="row">
+                        <span flex></span>
+                        <md-button class="md-raised md-primary" ng-click="register()">Sign Up</md-button>
+                    </div>
+                </form>
+            </md-content>
+        </md-tab>
+    </md-tabs>
+</md-content>
+
+<!--<uib-tabset active="activeJustified" justified="true">-->
+    <!--<uib-tab index="0" heading="SignIn">-->
+        <!--<div class="modal-header">-->
+            <!--<h3 class="modal-title">Sign In</h3>-->
+        <!--</div>-->
+        <!--<div class="modal-body">-->
+            <!--<form>-->
+                <!--<fieldset class="form-group">-->
+                    <!--<label for="signInEmail">Username</label>-->
+                    <!--<input type="text" class="form-control" name="username" id="signInEmail" placeholder="Enter username" ng-model="signin.username">-->
+                <!--</fieldset>-->
+                <!--<fieldset class="form-group">-->
+                    <!--<label for="signInPassword">Password</label>-->
+                    <!--<input type="password" class="form-control" name="password" id="signInPassword" placeholder="Password"-->
+                           <!--ng-model="signin.password">-->
+                    <!--<small class="text-muted"> Should be at least 5 characters</small>-->
+                <!--</fieldset>-->
+            <!--</form>-->
+
+        <!--</div>-->
+        <!--<div class="modal-footer">-->
+            <!--<button class="btn btn-primary" type="button" ng-click="login()">Login</button>-->
+            <!--<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>-->
+        <!--</div>-->
+    <!--</uib-tab>-->
+    <!--<uib-tab index="1" heading="Sign Up">-->
+        <!--<div class="modal-header">-->
+            <!--<h3 class="modal-title">Sign Up</h3>-->
+        <!--</div>-->
+        <!--<div class="modal-body">-->
+            <!--<form>-->
+                <!--<fieldset class="form-group">-->
+                    <!--<label for="signUpName">Name</label>-->
+                    <!--<input type="text" class="form-control" id="signUpName" placeholder="Your name.." ng-model="signup.name">-->
+                <!--</fieldset>-->
+                <!--<fieldset class="form-group">-->
+                    <!--<label for="signUpEmail">Email Address</label>-->
+                    <!--<input type="email" class="form-control" id="signUpEmail" placeholder="Your email address.." ng-model="signup.email">-->
+                <!--</fieldset>-->
+                <!--<fieldset class="form-group">-->
+                    <!--<label for="signUpUsername">Username</label>-->
+                    <!--<input type="text" class="form-control" id="signUpUsername" placeholder="Your username.." ng-model="signup.username">-->
+                <!--</fieldset>-->
+                <!--<fieldset class="form-group">-->
+                    <!--<label for="signUpPassword">Password</label>-->
+                    <!--<input type="password" class="form-control" id="signUpPassword" placeholder="Your password.."-->
+                           <!--ng-model="signup.password">-->
+                    <!--<small class="text-muted"> Should be at least 5 characters</small>-->
+                <!--</fieldset>-->
+            <!--</form>-->
+
+        <!--</div>-->
+        <!--<div class="modal-footer">-->
+            <!--<button class="btn btn-primary" type="button" ng-click="register()">Sign Up</button>-->
+            <!--<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>-->
+        <!--</div>-->
+    <!--</uib-tab>-->
+<!--</uib-tabset>-->

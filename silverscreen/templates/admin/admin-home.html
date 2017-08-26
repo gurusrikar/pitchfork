@@ -1,0 +1,12 @@
+<div layout="column" flex="100">
+    <reel-bar style="background-color: black;"></reel-bar>
+    <div layout="row" layout-align="start" layout-margin>
+        <movie-editor permalink="urlPermalink" md-whiteframe="6" flex></movie-editor>
+    </div>
+    <div layout="row" layout-align="start" layout-margin layout-wrap>
+        <md-button class="md-raised md-primary" ng-click="getAllMovies()">Show all movies</md-button>
+        <div ng-repeat="movie in movies" flex-gt-sm>
+            <md-button class="md-primary" ui-sref="admin-update-movie({permalink: movie.permalink})">{{movie.name}}</md-button>
+        </div>
+    </div>
+</div>

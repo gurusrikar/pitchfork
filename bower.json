@@ -1,0 +1,38 @@
+{
+  "name": "silverscreen",
+  "description": "front-end of pitchfork",
+  "main": "",
+  "authors": [
+    "gurusrikar <gurusrikar@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "mean",
+    "mongo",
+    "express",
+    "angular",
+    "node"
+  ],
+  "homepage": "/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "jquery": "^2.2.3"
+  },
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "angular": "^1.5.3",
+    "angular-ui-router": "^0.2.18",
+    "angular-cookies": "^1.5.5",
+    "font-awesome": "^4.6.3",
+    "angular-material": "^1.0.9",
+    "angular-animate": "^1.5.6",
+    "angular-aria": "^1.5.6"
+  }
+}
